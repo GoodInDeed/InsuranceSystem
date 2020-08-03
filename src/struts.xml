@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd"> 
+<struts>
+<package name="default" extends="struts-default">
+
+<action name="registerAgent" class="com.general.RegisterAgent">
+<result name="agent">/success.jsp</result>
+<result name="error">/error.jsp</result>
+</action>
+
+<action name="registerPH" class="com.general.RegisterPH" method="execute">
+<result name="success">/success.jsp</result>
+<result name="error">/error.jsp</result>
+</action>
+
+<action name="login" class="com.general.Login" method="execute">
+<result name="Admin">/admin.jsp</result>
+<result name="agent">/agent.jsp</result>
+<result name="policyholder">/policyholder.jsp</result>
+<result name="error">/error.jsp</result>
+</action>
+
+<action name="adminList" class="com.general.AdminList" method="execute">
+<result name="success">/success.jsp</result>
+<result name="error">/error.jsp</result>
+</action>
+
+</package>
+</struts>
